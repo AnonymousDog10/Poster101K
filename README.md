@@ -111,16 +111,15 @@ Every XML file includes：
 </annotation>
 ```
 
-<!--
 ## 👍 Acknowledgements
 We thank Qiuyang Yuan and Liying Wang for in-depth discussions and helpful poster labelling. We also thank Shuigeng Zhou for careful and patient guidance.
 
 ## 🤝 Feedback
-Suggestions and opinions on this dataset (both positive and negative) are welcomed. Please contact the author by sending an email to wangf21@m.fudan.edu.cn.
--->
+Suggestions and opinions on this dataset (both positive and negative) are welcome. Please contact the author by sending an email to wangf21@m.fudan.edu.cn.
+
 
 ## 📜 License
-This dataset is open source under [CC BY 4.0](LICENSE) license. <!-- For commercial purposes, please contact Dr. Fei Wang at wangf21@m.fudan.edu.cn or Prof. Shuigeng Zhou at sgzhou@fudan.edu.cn.-->
+This dataset is open source under [CC BY 4.0](LICENSE) license. For commercial purposes, please contact Dr. Fei Wang at wangf21@m.fudan.edu.cn or Prof. Shuigeng Zhou at sgzhou@fudan.edu.cn.
 ```bibtex
 @dataset{poster101k,
   year = {2025},
