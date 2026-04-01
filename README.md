@@ -21,7 +21,7 @@ We tested four baseline models in six graphic layout-related generation tasks (s
 ## 📥 Download
 This repository does not store data files directly. Please obtain them through the following methods:
 - Recommended download source (Kaggle)：[Kaggle](https://www.kaggle.com/datasets/flylyisflying93/poster101k/)
-- Alternative download sources：[Baidu Netdisk](https://pan.baidu.com/s/1p3bDj4suiawCB5ZA6sNGhQ?pwd=d8m3) (Access Code: d8m3)
+<!--- - Alternative download sources：[Baidu Netdisk](https://pan.baidu.com/s/1p3bDj4suiawCB5ZA6sNGhQ?pwd=d8m3) (Access Code: d8m3) --->
 
 ## 🚀 Quick Start
 ### Download through Kaggle API：
