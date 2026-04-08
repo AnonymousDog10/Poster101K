@@ -12,7 +12,7 @@
 
 ![Task Illustration](./Tasks_illustration_(L-R).jpg)  
 
-We tested four baseline models in six graphic layout-related generation tasks (shown in the figure above) with our dataset and three existing datasets to evaluate the value and potential of our dataset. Experimental results show the advantage of our dataset over the existing layout datasets (e.g. [Rico](http://www.interactionmining.org/rico.html), [PubLayNet](https://github.com/ibm-aur-nlp/PubLayNet), and [MagLayout](https://xtqiao.com/projects/content_aware_layout/)). Our dataset provides an important resource for model training and evaluation methods in the graphic layout field.
+We tested our method and baseline models in six graphic layout-related generation tasks (shown in the figure above) on our dataset and three public datasets to evaluate the value and potential of our dataset. Experimental results show the advantage of our dataset over the existing layout datasets (e.g. [Rico](http://www.interactionmining.org/rico.html), [PubLayNet](https://github.com/ibm-aur-nlp/PubLayNet), and [MagLayout](https://xtqiao.com/projects/content_aware_layout/)). Our dataset provides an important resource for model training and evaluation methods in the graphic layout field.
 
 ## 📎 Supplementary materials
 **Supplementary materials** are shown in [the Appendix file](./Poster101k_ACMMM26_Supplementary_Materials.pdf).
