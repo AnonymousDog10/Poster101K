@@ -3,6 +3,7 @@
 ![Python 3.6](https://img.shields.io/badge/Python-3.9-blue.svg)
 ![Format PNG](https://img.shields.io/badge/Format-PNG_JPG_WEBP-blue.svg)
 ![Images 70000](https://img.shields.io/badge/Images-101,914-blue.svg)
+![Images 70000](https://img.shields.io/badge/Labels-549,260-blue.svg)
 [![Kaggle](https://img.shields.io/badge/Download_on-Kaggle-blue.svg)](https://www.kaggle.com/datasets/flylyisflying93/poster101k/)
 
 ![Poster Examples](./Dataset_Introduction.png)  
