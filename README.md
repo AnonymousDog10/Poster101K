@@ -106,7 +106,7 @@ Suggestions and opinions on this dataset (both positive and negative) are welcom
 
 
 ## 📜 License
-This dataset is open source under [CC BY 4.0](LICENSE) license. For commercial purposes, please contact Dr. Fei Wang at wangf21@m.fudan.edu.cn or Prof. Shuigeng Zhou at sgzhou@fudan.edu.cn.
+This dataset is open source under [CC BY-NC-ND 4.0](LICENSE) license. For commercial purposes, please contact Dr. Fei Wang at wangf21@m.fudan.edu.cn or Prof. Shuigeng Zhou at sgzhou@fudan.edu.cn.
 ```bibtex
 @dataset{poster101k,
   year = {2025},
