@@ -34,9 +34,6 @@ The public release is organized separately from the research corpus. Raw images 
 - **Nine semantic categories:** logo, title, subtitle, underlay, text, image, caption, table, and list.
 - **Explicit underlay annotations:** support the study of grouping and layered poster composition.
 - **Two-level colour information:** five colours per poster and three colours per annotated element crop.
-- **Manual annotation and quality control:** three annotators, written guidelines, adjudication of ambiguous cases, and a theme-stratified audit.
-- **Duplicate-aware splits:** exact and near-duplicate control is completed before the 85/5/10 split is frozen.
-- **Release provenance:** the planned versioned manifest records file membership, split assignment, source information, release status, and checksums.
 
 
 ## Dataset composition
