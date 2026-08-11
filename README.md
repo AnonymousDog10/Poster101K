@@ -6,7 +6,7 @@
 ![Images 70000](https://img.shields.io/badge/Labels-549,252-blue.svg)
 [![Kaggle](https://img.shields.io/badge/Download_on-Kaggle-blue.svg)](https://www.kaggle.com/datasets/flylyisflying93/poster101k/)
 
-![Poster Examples](./Dataset_Introduction.png)  
+![Poster Examples](./poster101k_dataset.png)  
 
 
 **Poster101K** is a new large-scale image dataset of posters, originally created as a benchmark for graphic layout generation models. It includes 101,914 poster images covering six themes and 549,260 bounding boxes annotating nine types of design elements. It offers a significant advantage in scale and provides information on new design elements. The poster images were collected using [Eagle](https://cn.eagle.cool/) from [Pinterest](https://au.pinterest.com/), [Canvas](https://www.canva.cn/), [Fotor](https://www.fotor.com.cn/), [Freepik](https://https://wepik.com//), and [Gaoding](https://www.gaoding.com/). All poster images were manually annotated by [Label Studio](https://labelstud.io/). Only posters under permissive licenses were collected. All color palettes are extracted by [Pylette](https://doi.org/10.5281/zenodo.14757253). We evaluate the color aesthetics of Poster101K by using the [Image Color Aesthetics Assessment (ICAA)](https://github.com/woshidandan/Image-Color-Aesthetics-and-Quality-Assessment) method, trained initially on the ICAA17K photography dataset.
