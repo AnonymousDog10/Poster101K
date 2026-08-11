@@ -8,7 +8,6 @@
 [![Elements](https://img.shields.io/badge/annotated%20elements-549%2C252-1F6FEB)](#dataset-composition)
 [![Themes](https://img.shields.io/badge/themes-6-2EA44F)](#dataset-composition)
 [![Categories](https://img.shields.io/badge/element%20categories-9-2EA44F)](#annotation-schema)
-[![Split](https://img.shields.io/badge/split-85%2F5%2F10-F59E0B)](#dataset-splits)
 
 Poster images, layout annotations, explicit underlay labels, and poster- and element-level colour palettes.
 
@@ -20,16 +19,13 @@ Poster101K is a large-scale dataset for poster layout analysis and generation. T
 
 Poster101K also provides automatically extracted colour palettes at two levels. Each complete poster has a five-colour palette, and each annotated element crop has a three-colour palette. These annotations support research on poster geometry, layered composition, semantic element relationships, and the connection between layout and colour.
 
-The public release is organized separately from the research corpus. Raw images are included only for records whose redistribution basis has been verified and documented. Other eligible records may be released as annotations and metadata without the original image. The release manifest is the authoritative source for the contents and rights status of each public version.
+The public release is organized separately from the research corpus. Raw images will be included only for records whose redistribution basis has been verified and documented. Other eligible records may be released as annotations and metadata without the original image. 
 
-<!--
-After exporting the current dataset overview to a GitHub-friendly PNG file,
-place it at assets/poster101k_overview.png and uncomment this block:
 
 <p align="center">
-  <img src="assets/poster101k_overview.png" width="95%" alt="Poster101K dataset overview">
+  <img src="assets/poster101k_dataset.png" width="95%" alt="Poster101K dataset overview">
 </p>
--->
+
 
 ## Key features
 
@@ -42,20 +38,6 @@ place it at assets/poster101k_overview.png and uncomment this block:
 - **Duplicate-aware splits:** exact and near-duplicate control is completed before the 85/5/10 split is frozen.
 - **Release provenance:** the planned versioned manifest records file membership, split assignment, source information, release status, and checksums.
 
-## Release status
-
-The dataset artifacts are being prepared as a versioned journal release. This table distinguishes the research corpus described in the manuscript from material that is currently downloadable.
-
-| Artifact | Current status | Planned release record |
-|---|---|---|
-| Dataset description and aggregate statistics | Available on this page | Versioned dataset card and statistics |
-| Raw poster images | Record-level redistribution review in progress | Rights-verified image subset |
-| Layout annotations and metadata | Versioned release in preparation | Persistent dataset record |
-| Official train/validation/test splits | Versioned release in preparation | Immutable files with checksums |
-| Annotation guide and schema | Release in preparation | Version-controlled documentation |
-| Curation and quality-control summaries | Release in preparation | Non-identifying audit artifacts |
-
-Stable download links will be added only after the corresponding release has been tested from a clean, unauthenticated environment. The number of research-corpus records must not be interpreted as the number of raw images available for public redistribution.
 
 ## Dataset composition
 
