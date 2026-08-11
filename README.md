@@ -23,7 +23,7 @@ The public release is organized separately from the research corpus. Raw images 
 
 
 <p align="center">
-  <img src="assets/poster101k_dataset.png" width="95%" alt="Poster101K dataset overview">
+  <img src="poster101k_dataset.png" width="95%" alt="Poster101K dataset overview">
 </p>
 
 
