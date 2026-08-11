@@ -75,116 +75,26 @@ Filtering was completed before constructing the train, validation, and test subs
 
 The filtering process removes corrupted files, low-resolution images, incomplete canvases, invalid aspect ratios, duplicates, and low-quality content.
 
-## Duplicate control
-
-Exact duplicates are detected using file checksums. Resized, recompressed, cropped, and template-derived candidates are identified using perceptual hashes and normalized CLIP embeddings. A pair is flagged for review when:
-
-- its perceptual-hash Hamming distance is at most 6; and
-- its CLIP cosine similarity is at least 0.95.
-
-Four data curators review the flagged pairs using predefined criteria for exact duplicates, template variants, and visually related but independent designs. Confirmed duplicates are removed before the official split files are frozen.
-
-## Annotation protocol
-
-Three annotators manually labelled Poster101K using Label Studio. Before production annotation, they reviewed a written guide covering semantic roles, box boundaries, and ambiguous cases. Each poster was assigned to one annotator, and uncertain annotations were discussed and resolved jointly.
-
-All geometric annotations are axis-aligned rectangular boxes. Label Studio exports percentage coordinates in JSON format, which are converted into XML records containing the poster identifier, canvas dimensions, semantic category, box coordinates, and palette information. For downstream processing, every valid box can be normalized to centre coordinates, width, and height in the unit square.
-
-## Annotation schema
-
-| Category | Description |
-|---|---|
-| `logo` | Brand marks and logos |
-| `title` | Primary headline text |
-| `subtitle` | Secondary headline text |
-| `underlay` | A shape or block whose main role is to support, group, or separate foreground content |
-| `text` | General body text |
-| `image` | Photographic, illustrated, or other image regions |
-| `caption` | Short descriptive or explanatory text |
-| `table` | Tabular content |
-| `list` | Structured list content |
-
-A full-canvas background and ordinary whitespace are not labelled as underlays. Title, subtitle, text, and caption are distinguished by their communicative roles and visual salience rather than by font size alone.
-
-## Annotation quality control
-
-A theme-stratified audit was performed on 300 posters covering all six themes. Corresponding elements were matched before measuring category agreement and box IoU. The audit produced:
-
-| Measure | Result |
-|---|---:|
-| Category agreement | 95.6% |
-| Mean bounding-box IoU | 0.88 |
-| Underlay agreement | 91.3% |
-
-Disagreements identified during the audit were reviewed and resolved jointly. The public documentation will include the annotation guide and a non-identifying quality-control summary.
-
-## Colour palettes
-
-Colour palettes are automatically extracted from the source poster images using Pylette:
-
-- **Poster-level palette:** five representative colours from the complete poster.
-- **Element-level palette:** three representative colours from each annotated bounding-box crop.
-
-Palette representatives are computed as cluster means, converted to sRGB, and sorted by their assigned pixel proportions. The image-level ICAA assessment reported in the manuscript characterizes the source poster images; it does not validate palette-extraction accuracy and should not be interpreted as an aesthetic ranking of datasets.
-
-## Spatial statistics
-
-Poster101K supports category-pair analysis of relative element area and geometric overlap. To reduce the influence of posters containing many element pairs, statistics are first aggregated within each poster and then across posters:
-
-- log area ratios are summarized within and across posters using the median; and
-- pairwise box IoU is averaged within each poster and then across posters.
-
-The aggregate analysis shows category-dependent relative-area patterns and higher overlap for some category pairs. Underlay-foreground pairs, in particular, exhibit more overlap than most foreground-foreground pairs. These are aggregate geometric observations; they do not encode layer order or prove that every overlap is visually desirable.
-
-## Dataset splits
-
-Poster101K uses a theme-stratified **85/5/10** train/validation/test split. The poster is the sampling unit, and duplicate control is completed before the split files are frozen. The same poster-level split is used for the Poster101K-NoUnderlay variant.
-
-The versioned release will contain:
-
-```text
-splits/
-└── v1.0/
-    ├── train.txt
-    ├── validation.txt
-    ├── test.txt
-    └── split_statistics.json
-```
-
-Each split file will have a published checksum, and the three subsets will be checked for disjoint membership and complete coverage of the corresponding release.
-
 ## Dataset organization
 
-The public package is designed around a release manifest so that image availability can be distinguished from annotation and metadata availability.
-
 ```text
-Poster101K-vX.Y/
-├── DATA_CARD.md
-├── ANNOTATION_GUIDE.md
-├── DATA_LICENSE.md
-├── RIGHTS.md
-├── release_manifest.csv
-├── release_statistics.json
-├── checksums.sha256
-├── images/                    # Rights-verified images only
+Poster101K-v1.0/
+├── images/                # Rights-verified images only
 │   ├── Business/
 │   ├── Culture/
 │   ├── Fashion/
 │   ├── Festival/
 │   ├── Food/
 │   └── Life/
-├── annotations/
-│   ├── Business_annotation/xml/
-│   ├── Culture_annotation/xml/
-│   ├── Fashion_annotation/xml/
-│   ├── Festival_annotation/xml/
-│   ├── Food_annotation/xml/
-│   └── Life_annotation/xml/
-└── splits/
-    └── v1.0/
-```
+└── annotations_withColor/
+    ├── Business_annotation/xml/
+    ├── Culture_annotation/xml/
+    ├── Fashion_annotation/xml/
+    ├── Festival_annotation/xml/
+    ├── Food_annotation/xml/
+    └── Life_annotation/xml/
 
-The exact directory contents of a release are determined by `release_manifest.csv`, not by the aggregate research-corpus count.
+```
 
 ## XML annotation example
 
